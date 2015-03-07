@@ -25,7 +25,12 @@ public class play extends Hand {
 		
 		Hand[] hands = {hand1, hand2};
 		
-		System.out.println(evaluate(hands));
+		if (hand1==evaluate(hands)) {
+			System.out.println("player 1 wins");
+		}
+		else {
+			System.out.println("player 2 wins");
+		}
 		
 	}
 	
