@@ -1,11 +1,12 @@
 package pokerEngine;
+import pokerEngine.Hand;;
 
-public class play extends Hand {
+public class play {
 	
-	public play(Deck deck) {
-		super(deck);
+	//public play(Deck deck) {
+		//super(deck);
 		// TODO Auto-generated constructor stub
-	}
+	//}
 
 	public static void main(String[] args){
 
@@ -25,7 +26,7 @@ public class play extends Hand {
 		
 		Hand[] hands = {hand1, hand2};
 		
-		if (hand1==evaluate(hands)) {
+		if (hand1==Hand.evaluate(hands)) {
 			System.out.println("player 1 wins");
 		}
 		else {

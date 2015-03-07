@@ -2,7 +2,7 @@ package pokerEngine;
 
 import java.util.ArrayList;
 
-public class Hand {
+public class Hand extends play{
 	
 	private ArrayList<Card> cards = new ArrayList<Card>();
 	private int cardAmount = 5;
@@ -15,8 +15,8 @@ public class Hand {
 			evaluate(hands[i]);
 		}
 		for (int i=0; i < hands.length; i++) {
-			for (int j = i; j < hands.length; j++) {
-				while (hands[i].Score >= hands[j].Score) {
+			for (int j = i+1; j < hands.length-1; j++) {
+				if (hands[i].Score >= hands[j].Score) {
 					hands[i].WinStatus++;
 				}
 			}
@@ -26,7 +26,8 @@ public class Hand {
 				return hands[i];
 			}
 		}
-		return hands[hands.length];
+		return hands[hands.length-1];
+		
 	}
 	
 	public Hand(Deck deck){
