@@ -17,12 +17,12 @@ public enum eCardRank {
 	
 	private int eCardRank;
 	
-	private eCardRank (int rank)
-	{
+	private eCardRank(int rank) {
 		this.eCardRank = rank;
 	}
 	
-	public int getCardRank() {
+	protected int getCardRank() {
 		return eCardRank;
 	}
-	}
+	
+}
